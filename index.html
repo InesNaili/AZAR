@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azar Cosmetique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="contenu">
+        <nav class="navbar">
+            <a href="index.html" class="logo-link"><img src="image/image22.jpg" alt="Logo" class="logo-img"></a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="content/inscription.html">Inscription</a></li>
+                <li><a href="content/connexion.html" class="btn-connexion">Connexion</a></li>
+                <li><a href="content/produit.html">Produits</a></li>
+                <li><a href="content/pannier.html">pannier</a></li>
+            </ul>
+        </nav>
+
+        <div class="video-container">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="video/hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">100% Naturel · Fait en Algérie</span>
+                <h1 class="hero-titre">Le secret de la nature,<br>révélé pour vous.</h1>
+                <div class="hero-cta">
+                    <a href="content/produit.html" class="btn-hero-primary">Découvrir la collection</a>
+                    <a href="#packs" class="btn-hero-secondary">Voir les offres</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-intro-video">
+            <video autoplay muted playsinline id="intro-video" onended="cacherIntro()">
+                <source src="video/hero_intro.mp4" type="video/mp4">
+            </video>
+        </div>
+    </header>
+
+    <div class="bandeau-reassurance">
+        <div class="bandeau-inner">
+            <div class="reassurance-item"><i class="fas fa-leaf"></i> <span>Ingrédients 100% naturels</span></div>
+            <div class="reassurance-sep">|</div>
+            <div class="reassurance-item"><i class="fas fa-shipping-fast"></i> <span>Livraison rapide en Algérie</span></div>
+            <div class="reassurance-sep">|</div>
+            <div class="reassurance-item"><i class="fas fa-award"></i> <span>Qualité garantie</span></div>
+            <div class="reassurance-sep">|</div>
+            <div class="reassurance-item"><i class="fas fa-heart"></i> <span>Fait avec amour</span></div>
+        </div>
+    </div>
+
+    <div class="promo-flash">
+        <div class="promo-flash-inner">
+            <span class="flash-badge">PROMO DU MOMENT</span>
+            <p>Obtenez <strong>-15% sur votre 1ère commande</strong> avec le code : <strong class="code-promo">AZAR15</strong></p>
+            <a href="content/inscription.html" class="btn-flash">J'en profite</a>
+        </div>
+    </div>
+
+    <section class="section-produits">
+        <div class="titre-section-wrap">
+            <span class="section-label">Nos incontournables</span>
+            <h2 class="section-titre">Best Sellers</h2>
+        </div>
+        <div class="carrousel-container">
+            <button class="nav-btn prev" onclick="scrollCarrousel(-300)"><i class="fas fa-chevron-left"></i></button>
+            <div class="produits-grille" id="grilleProduits"></div>
+            <button class="nav-btn next" onclick="scrollCarrousel(300)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="voir-plus-wrap">
+            <a href="content/produit.html" class="btn-voir-plus">Voir tous les produits <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="packs-promo" id="packs">
+        <div class="titre-section-wrap light">
+            <span class="section-label light">Offres exclusives</span>
+            <h2 class="section-titre light">Nos Packs Spéciaux</h2>
+        </div>
+        <div class="packs-grid">
+            <div class="pack-card pack-featured">
+                <div class="pack-badge">Le Plus Populaire</div>
+                <img src="image/image21.jpg" alt="Pack Capillaire" class="pack-img">
+                <h3>Pack Soin Capillaire</h3>
+                <p>Le duo parfait pour des cheveux sublimés</p>
+                <div class="pack-prix"><span class="ancien-prix">3 000 DA</span><span class="prix">2 600 DA</span></div>
+                <button class="btn-ajout btn-pack" onclick="ajouterAuPanier('Pack Soin Capillaire', '2 600 DA', 'image/image21.jpg')">Profiter de l'offre</button>
+            </div>
+            <div class="pack-card">
+                <div class="pack-badge">Nouveau</div>
+                <img src="image/image20.jpg" alt="Pack Douceur" class="pack-img">
+                <h3>Pack Douceur Quotidien</h3>
+                <p>Prenez soin de vous de la tête aux pieds</p>
+                <div class="pack-prix"><span class="ancien-prix">2 850 DA</span><span class="prix">2 400 DA</span></div>
+                <button class="btn-ajout btn-pack" onclick="ajouterAuPanier('Pack Douceur Quotidien', '2 400 DA', 'image/image20.jpg')">Profiter de l'offre</button>
+            </div>
+        </div>
+    </section>
+
+   <section class="section-avis">
+    <div class="titre-section-wrap">
+        <span class="section-label">Témoignages</span>
+        <h2 class="section-titre">Nos clientes témoignent</h2>
+    </div>
+    <div class="avis-container">
+        <div class="avis-card">
+            <p>"La peau est tellement douce après le gommage au sucre, une vraie révélation !"</p>
+            <h3>— Sarah M.</h3>
+        </div>
+        <div class="avis-card">
+            <p>"Enfin des produits 100% naturels qui fonctionnent vraiment. Je recommande !"</p>
+            <h3>— Amira K.</h3>
+        </div>
+        <div class="avis-card">
+            <p>"Livraison rapide et emballage soigné. L'huile d'argan est exceptionnelle."</p>
+            <h3>— Yasmine L.</h3>
+        </div>
+    </div>
+</section>
+
+    <section class="section-coming-soon">
+    <div class="coming-soon-content">
+        <span class="section-label">Exclusivité</span>
+        <h2 class="section-titre">Nouvelle Gamme à venir</h2>
+        <p>Découvrez prochainement notre nouvelle gamme de soins. Restez connectés pour ne rien manquer !</p>
+        <div class="coming-soon-badge">Bientôt disponible</div>
+    </div>
+    <div class="coming-soon-img">
+        <img src="image/image23.jpg" alt="Nouvelle Gamme">
+    </div>
+</section>
+
+    <footer class="footer-azar">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Azar Cosmétique</h3>
+                <p>Le secret de la nature au service de votre beauté.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="content/produit.html">Produits</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><a href="https://www.google.com/maps/place/Tizi+Ouzou" target="_blank"><i class="fas fa-map-marker-alt"></i> Tizi Ouzou, Algérie</a></p>
+                <p><a href="mailto:contact@azar-cosmetique.dz" target="_blank"><i class="fas fa-envelope"></i> contact@azar-cosmetique.dz</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons-vertical">
+                    <a href="https://www.instagram.com/azar_cosmetiques/#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@azar_cosmetiques?lang=fr-ca" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="https://web.facebook.com/profile.php?id=61590282374618" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Azar Cosmétique - Projet Académique UMMTO</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

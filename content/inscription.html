@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Azar Cosmetique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/inscriprion.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="../index.html" class="logo-link">
+        <img src="../image/image22.jpg" alt="Logo Azar" class="logo-img">
+    </a>
+    <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+        <li><a href="connexion.html" class="btn-connexion">Connexion</a></li>
+        <li><a href="produit.html">Produits</a></li>
+        <li><a href="pannier.html">Pannier</a></li>
+    </ul>
+</nav>
+
+   <h1 class="sr-only">Connexion - Azar Cosmétique</h1>
+   
+
+<section class="register-page-content">
+    <div class="form-container">
+        <div class="form-intro">
+            <h2>Rejoignez l'univers Azar</h2>
+            <p>Créez votre compte pour bénéficier de conseils personnalisés, suivre vos commandes et découvrir nos offres exclusives.</p>
+        </div>
+
+        <form action="commande.html" class="register-form">
+            <div class="input-group">
+                <label for="nameinput">NOM COMPLET</label>
+                <input type="text" name="nom" id="nameinput" placeholder="Votre nom" required>
+            </div>
+
+            <div class="input-group">
+                <label for="adressinput">ADRESSE E-MAIL</label>
+                <input type="email" id="adressinput" placeholder="nom@exemple.com" required>
+                <span id="email-error" style="color: #e74c3c; font-size: 11px; display: none;">L'adresse email n'est pas valide.</span>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="dob">DATE DE NAISSANCE</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="input-group">
+                    <label for="skin-type">TYPE DE PEAU</label>
+                    <select id="skin-type" name="skin">
+                        <option value="">Sélectionnez...</option>
+                        <option value="sec">Peau sèche</option>
+                        <option value="gras">Peau grasse</option>
+                        <option value="mixte">Peau mixte</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="motinput">MOT DE PASSE</label>
+                <input type="password" name="password" id="motinput" placeholder="••••••••" required>
+            </div>
+
+            <input type="submit" value="CRÉER MON COMPTE" class="btn-submit">
+            
+            <p class="login-redirect">Déjà membre ? <a href="connexion.html">Connectez-vous ici</a></p>
+        </form>
+    </div>
+</section>
+
+ <footer class="footer-azar">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Azar Cosmétique</h3>
+                <p>Le secret de la nature au service de votre beauté.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="produit.html">Produits</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><a href="https://www.google.com/maps/place/Tizi+Ouzou" target="_blank"><i class="fas fa-map-marker-alt"></i> Tizi Ouzou, Algérie</a></p>
+                <p><a href="mailto:contact@azar-cosmetique.dz" target="_blank"><i class="fas fa-envelope"></i> contact@azar-cosmetique.dz</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons-vertical">
+                    <a href="https://www.instagram.com/azar_cosmetiques/#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@azar_cosmetiques?lang=fr-ca" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="https://web.facebook.com/profile.php?id=61590282374618" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Azar Cosmétique - Projet Académique UMMTO</p>
+        </div>
+    </footer>
+
+
+<script src="../js/validation.js"></script>
+</body>
+</html>

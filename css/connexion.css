@@ -1,0 +1,115 @@
+
+
+html, body { 
+    margin: 0; 
+    background-color: #F8F5F0; 
+    font-family: sans-serif; 
+}
+
+.login-page-content {
+   
+    background: linear-gradient(rgba(248, 245, 240, 0.5), rgba(248, 245, 240, 0.5)), 
+                url('../image/image25.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.login-form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(45, 79, 63, 0.15);
+}
+
+fieldset { border: none; padding: 0; margin: 0; }
+
+legend {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2D4F3F;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group { margin-bottom: 20px; }
+
+label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #2D4F3F;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    background-color: #fafafa;
+    box-sizing: border-box; 
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #2D4F3F;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #3d6b55;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* RESPONSIVE  */
+
+@media (max-width: 480px) {
+    
+    .login-form {
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    legend {
+        font-size: 18px; 
+    }
+
+    input {
+        padding: 12px; 
+    }
+
+    .btn-submit {
+        padding: 14px; 
+    }
+}
